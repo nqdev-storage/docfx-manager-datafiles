@@ -14,14 +14,47 @@
     }
   ],
   "build": {
+    "globalMetadata": {
+      "_appName": "manager-datafiles",
+      "_appTitle": "Manager Datafiles",
+      "_enableSearch": true,
+      "_googleAnalyticsTagId": "G-Q5N6XJHEX5",
+      "_appFooter": "<span>Supported by the <a href=\"https://dotnetfoundation.org\">.NET Foundation</a>. Made with <a href=\"https://dotnet.github.io/docfx\">docfx</a></span>",
+      "pdf": true
+    },
+    "globalMetadataFiles": [],
+    "fileMetadata": {
+      "_appTitle": {
+        "articles/dotnet/**/*.md": ".NET",
+        "articles/typescript/**/*.md": "TypeScript"
+      }
+    },
+    "fileMetadataFiles": [],
+    "output": "_site",
+    "template": [
+      "common",
+      "default",
+      "modern",
+      "statictoc",
+      "templates",
+      "templates/mytemplate"
+    ],
+    "sitemap": {
+      "baseUrl": "https://github.com/nqdev-storage/docfx-manager-datafiles",
+      "priority": 0.1,
+      "changefreq": "daily"
+    },
     "content": [
       {
+        "src": "articles",
+        "dest": "docs",
         "files": [
           "**/*.{md,yml}"
         ],
         "exclude": [
           "_site/**",
-          "obj/**"
+          "obj/**",
+          "**/include/**"
         ]
       }
     ],
@@ -38,29 +71,20 @@
         ]
       }
     ],
-    "output": "_site",
-    "template": [
-      "default",
-      "modern",
-      "template"
-    ],
-    "globalMetadata": {
-      "_appName": "manager-datafiles",
-      "_appTitle": "manager-datafiles",
-      "_enableSearch": true,
-      "pdf": true,
-      "_googleAnalyticsTagId": "G-Q5N6XJHEX5",
-      "_appFooter": "<span>Supported by the <a href=\"https://dotnetfoundation.org\">.NET Foundation</a>. Made with <a href=\"https://dotnet.github.io/docfx\">docfx</a></span>"
-    },
     "markdownEngineProperties": {
+      "markdigExtensions": [
+        "Abbreviations",
+        "Footnotes"
+      ],
       "alerts": {
         "TODO": "alert alert-secondary"
+      },
+      "plantUml": {
+        "outputFormat": "svg",
+        "remoteUrl": "http://www.plantuml.com/plantuml/",
+        "renderingMode": "remote"
       }
-    },
-    "sitemap": {
-      "baseUrl": "https://github.com/nqdev-storage/docfx-manager-datafiles",
-      "priority": 0.5,
-      "changefreq": "daily"
     }
-  }
+  },
+  "pdf": {}
 }

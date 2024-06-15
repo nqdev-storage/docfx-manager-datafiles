@@ -2,62 +2,11 @@
   "sitemap": {
     "baseUrl": "https://github.com/nqdev-storage/docfx-manager-datafiles/",
     "changefreq": "daily",
-    "priority": 0.5
+    "priority": 0.1
   },
   "source_base_path": "D:/nqdev/github/nqdev-storage/docfx-manager-datafiles",
   "xrefmap": "xrefmap.yml",
   "files": [
-    {
-      "type": "Resource",
-      "output": {
-        "resource": {
-          "relative_path": "index.json"
-        }
-      }
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "api/getting-started.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/getting-started.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "api/introduction.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/introduction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
-        ".json": {
-          "relative_path": "api/toc.json"
-        }
-      },
-      "version": ""
-    },
     {
       "type": "Resource",
       "source_relative_path": "codesnippet/Rtf/Hyperlink/RtfDocumentProcessor.cs",
@@ -89,150 +38,11 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "docs/getting-started.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/getting-started.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/introduction.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/introduction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/markdown.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/markdown.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/pdf.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/pdf.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/table-of-contents.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/table-of-contents.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/template.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/template.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "docs/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "docs/toc.html"
-        },
-        ".json": {
-          "relative_path": "docs/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "dashboard",
-      "source_relative_path": "extensions/packages.yml",
-      "output": {
-        ".html": {
-          "relative_path": "extensions/packages.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "dashboard",
-      "source_relative_path": "extensions/templates.yml",
-      "output": {
-        ".html": {
-          "relative_path": "extensions/templates.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "extensions/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "extensions/toc.html"
-        },
-        ".json": {
-          "relative_path": "extensions/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "dashboard",
-      "source_relative_path": "extensions/tools.yml",
-      "output": {
-        ".html": {
-          "relative_path": "extensions/tools.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Resource",
       "source_relative_path": "images/output-example.png",
       "output": {
         "resource": {
           "relative_path": "images/output-example.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "index.md",
-      "output": {
-        ".html": {
-          "relative_path": "index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
-        ".json": {
-          "relative_path": "toc.json"
         }
       },
       "version": ""
