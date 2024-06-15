@@ -6,4 +6,4 @@
 
 ---
 
-_Phiên bản release đầu tiên, với domain ứng dụng là storage.quyit.id.vn_
+_Phiên bản release đầu tiên, với domain ứng dụng là `storage.quyit.id.vn/docfx-manager-datafiles`_
