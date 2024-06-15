@@ -41,7 +41,8 @@
     "template": [
       "default",
       "modern",
-      "./themes/material"
+      "./themes/material",
+      "./themes/material-classic"
     ],
     "postProcessors": [
       "ExtractSearchIndex"
