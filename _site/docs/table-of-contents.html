@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Introduction | manager-datafiles </title>
+      <title>Table of Contents | manager-datafiles </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Introduction | manager-datafiles ">
+      <meta name="title" content="Table of Contents | manager-datafiles ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/nqdev-storage/docfx-manager-datafiles/blob/main/docs/introduction.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/nqdev-storage/docfx-manager-datafiles/blob/main/docs/table-of-contents.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -92,13 +92,96 @@
         </div>
 
         <article data-uid="">
-<h1 id="introduction">Introduction</h1>
+<h1 id="table-of-contents">Table of Contents</h1>
 
+<p>A table of contents (TOC) defines the structure of a set of documents.</p>
+<h2 id="yaml-toc">YAML TOC</h2>
+<p>To add a TOC, create a file named <code>toc.yml</code>. Here's the structure for a simple YAML TOC:</p>
+<pre><code class="lang-yaml">items:
+- name: Tutorial
+  items:
+  - href: tutorial.md
+  - href: step-1.md
+  - href: step-2.md
+  - href: step-3.md
+</code></pre>
+<p>The YAML document is a tree of TOC nodes, each of which has these properties:</p>
+<ul>
+<li><code>name</code>: An optional display name for the TOC node. When not specified, uses the <code>title</code> metadata or the first Heading 1 element from the referenced article as the display name.</li>
+<li><code>href</code>: The path the TOC node leads to. Optional because a node can exist just to parent other nodes.</li>
+<li><code>items</code>: If a node has children, they're listed in the items array.</li>
+<li><code>uid</code>: The uid of the article. Can be used instead of <code>href</code>.</li>
+<li><code>expanded</code>: Expand children on load, only works if the template is <code>modern</code>.</li>
+</ul>
+<p>When an article is referenced by a TOC through <code>href</code>, the corresponding TOC appears when viewing that article. If multiple TOCs reference the same article, or the article isn't referenced by any TOC, the nearest TOC with the least amount of directory jumps is picked.</p>
+<p>The <code>order</code> property can customize this pick logic, TOCs with a smaller order value are picked first. The default order is 0.</p>
+<pre><code class="lang-yml">order: 100
+items:
+- ...
+</code></pre>
+<h2 id="nested-tocs">Nested TOCs</h2>
+<p>To nest a TOC within another TOC, set the <code>href</code> property to point to the <code>toc.yml</code> file that you want to nest. You can also use this structure as a way to reuse a TOC structure in one or more TOC files.</p>
+<p>Consider the following two <code>toc.yml</code> files:</p>
+<p><em>toc.yml</em>:</p>
+<pre><code class="lang-yaml">items:
+- name: Overview
+  href: overview.md
+- name: Reference
+  href: api/toc.yml
+</code></pre>
+<p><em>api/toc.yml</em>:</p>
+<pre><code class="lang-yaml">items:
+- name: System.String
+  href: system.string.yml
+- name: System.Float
+  href: system.float.yml
+</code></pre>
+<p>This structure renders as follows:</p>
+<pre><code>Overview
+Reference
+├─ System.String
+├─ System.Float
+</code></pre>
+<p>Nested TOCs by default have <code>order</code> set to <code>100</code> to let containing TOCs take precedence.</p>
+<h2 id="reference-tocs">Reference TOCs</h2>
+<p>To reference another TOC without embeding it to a parent TOC using nested TOCs, set the <code>href</code> property to point to the directory that you want to reference and end the string with <code>/</code>, this will generate a link pointing to the first article in the referenced TOC.</p>
+<p>Consider the following folder structure:</p>
+<pre><code>toc.yml
+├─ System
+    ├─ toc.yml
+├─ System.Collections
+    ├─ toc.yml
+</code></pre>
+<p><em>toc.yml</em>:</p>
+<pre><code class="lang-yml">- name: System
+  href: System/
+- name: System.Collections
+  href: System.Collections/
+</code></pre>
+<p>This structure renders as follows:</p>
+<pre><code class="lang-yml">System # Link to the first article in System/toc.yml
+System.Collections  # Link to the first article in System.Collections/toc.yml
+</code></pre>
+<h2 id="navigation-bar">Navigation Bar</h2>
+<p>The <code>toc.yml</code> file in the <code>docfx.json</code> folder will be used to fill the content of the navigation bar at the top of the page. It usually uses <a href="#reference-tocs">Reference TOCs</a> to navigate to child pages.</p>
+<p>The following example creates a navigation bar with two  <em>Docs</em> and <em>API</em> entries:</p>
+<pre><code>toc.yml
+├─ docs
+    ├─ toc.yml
+├─ api
+    ├─ toc.yml
+</code></pre>
+<p><em>toc.yml</em>:</p>
+<pre><code class="lang-yml">- name: Docs
+  href: docs/
+- name: API
+  href: api/
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/nqdev-storage/docfx-manager-datafiles/blob/main/docs/introduction.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/nqdev-storage/docfx-manager-datafiles/blob/main/docs/table-of-contents.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

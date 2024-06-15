@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Create PDF Files | manager-datafiles </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Create PDF Files | manager-datafiles ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nqdev-storage/docfx-manager-datafiles/blob/main/docs/pdf.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Q5N6XJHEX5"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Q5N6XJHEX5');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="manager-datafiles">
+            manager-datafiles
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="create-pdf-files">Create PDF Files</h1>
+
+<p>Docfx can build PDF files from articles and API documentations.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This article applies to docfx 2.73.0 or greater and the modern site template.</p>
+</div>
+<h2 id="enable-pdf">Enable PDF</h2>
+<p>To enable PDF for the whole site:</p>
+<ol>
+<li>Set the <code>pdf</code> global metadata to <code>true</code> in <code>docfx.json</code>:</li>
+</ol>
+<pre><code class="lang-json">{
+  &quot;build&quot;: {
+    &quot;globalMetadata&quot;: {
+      &quot;pdf&quot;: true
+    }
+  }
+}
+</code></pre>
+<ol start="2">
+<li><p>Run <code>docfx build</code> command to build the site. This command produces a site with a &quot;Download PDF&quot; button.</p>
+</li>
+<li><p>Run <code>docfx pdf</code> command to build the PDF files. This command creates a <code>toc.pdf</code> file for every TOC in the output directory.</p>
+</li>
+</ol>
+<p>PDF can also be configured per TOC directly in <code>toc.yml</code> files:</p>
+<pre><code class="lang-yaml">pdf: true
+items:
+- name: Getting Started
+  href: getting-started.md
+</code></pre>
+<p>In case the TOC file is auto-generated, use <a href="./config.md#metadata">file metadata</a> to configure PDF per TOC file:</p>
+<pre><code class="lang-json">{
+  &quot;build&quot;: {
+    &quot;fileMetadata&quot;: {
+      &quot;pdf&quot;: {
+        &quot;api/**/toc.yml&quot;: true
+      }
+    }
+  }
+}
+</code></pre>
+<p>You can create a single PDF file using a dedicated PDF TOC containing all articles with <a href="table-of-contents.html#nested-tocs">Nested TOCs</a> and set <code>order</code> to a bigger value to prevent the PDF TOC from appearing on the website.</p>
+<pre><code class="lang-yaml">order: 200
+items:
+- name: Section 1
+  href: section-1/toc.yml
+- name: Section 2
+  href: section-2/toc.yml
+</code></pre>
+<h2 id="pdf-metadata">PDF Metadata</h2>
+<p>These metadata applies to TOC files that controls behaviors of PDF generation.</p>
+<h3 id="pdf"><code>pdf</code></h3>
+<p>Indicates whether to generate PDF and shows the &quot;Download PDF&quot; button on the site.</p>
+<h3 id="pdffilename"><code>pdfFileName</code></h3>
+<p>Sets the PDF output file name. The default value is <code>toc.pdf</code>.</p>
+<h3 id="pdftocpage"><code>pdfTocPage</code></h3>
+<p>Indicates whether to include a &quot;Table of Contents&quot; pages at the beginning.</p>
+<h3 id="pdfcoverpage"><code>pdfCoverPage</code></h3>
+<p>A path to an HTML page relative to the root of the output directory. The HTML page will be inserted at the beginning of the PDF file as cover page.</p>
+<h3 id="pdfprintbackground"><code>pdfPrintBackground</code></h3>
+<p>Indicates whether to include background graphics when rendering the pdf.</p>
+<h3 id="pdfheadertemplate"><code>pdfHeaderTemplate</code></h3>
+<p>HTML template for the print header. Should be valid HTML markup with following HTML elements used to inject printing values into them:</p>
+<ul>
+<li><code>&lt;span class='pageNumber'&gt;&lt;/span&gt;</code>: current page number.</li>
+<li><code>&lt;span class='totalPages'&gt;&lt;/span&gt;</code>: total pages in the document.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For text to appear in the header and footer HTML template, you need to explicitly set the <code>font-size</code> CSS style.</p>
+</div>
+<h3 id="pdffootertemplate"><code>pdfFooterTemplate</code></h3>
+<p>HTML template for the print footer. Should use the same format as the <a href="#pdfheadertemplate">header template</a>. Uses the following default footer template if unspecified:</p>
+<pre><code class="lang-html">&lt;div style=&quot;width: 100%; font-size: 12px;&quot;&gt;
+  &lt;div style=&quot;float: right; padding: 0 2em&quot;&gt;
+    &lt;span class=&quot;pageNumber&quot;&gt;&lt;/span&gt; / &lt;span class=&quot;totalPages&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For the cover page to appear in PDF, it needs to be included in build.
+For instance, if <code>cover.md</code> is outputted to <code>_site/cover.html</code>, you should set <code>pdfCoverPage</code> to <code>cover.html</code>.</p>
+</div>
+<h2 id="customize-pdf-pages">Customize PDF Pages</h2>
+<p>PDF rendering uses the same HTML site template. To customize PDF page styles, use the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Printing">CSS print media</a>:</p>
+<pre><code class="lang-css">@media print {
+  /* All your print styles go here */
+}
+</code></pre>
+<p>To preview PDF rendering result, print the HTML page in the web browser, or set <em>&quot;Emulate CSS media type&quot;</em> to <em>print</em> in the rendering tab of browser developer tools.</p>
+<h3 id="customize-cover-page">Customize Cover Page</h3>
+<p>The site template adds a default margin and removes background graphics for pages in print mode. Use <code>@page { margin: 0 }</code> to remove the default margin and use <code>print-color-adjust: exact</code> to keep background graphics for cover pages.</p>
+<p>See <a href="https://raw.githubusercontent.com/dotnet/docfx/main/samples/seed/pdf/cover.md">this example</a> on a PDF cover page that fills the whole page with background graphics:</p>
+<p><img src="./media/pdf-cover-page.png" alt="Alt text"></p>
+<h3 id="customize-toc-page">Customize TOC Page</h3>
+<p>When <code>pdfTocPage</code> is <code>true</code>, a Table of Content page is inserted at the beginning of the PDF file.</p>
+<p><img src="media/pdf-toc-page.png" alt="Alt text"></p>
+<p>You can customize the PDF page using the following CSS selectors:</p>
+<ul>
+<li><code>.pdftoc h1</code>: The &quot;Table of Contents&quot; heading.</li>
+<li><code>.pdftoc ul</code>: The TOC list.</li>
+<li><code>.pdftoc li</code>: The TOC list item.</li>
+<li><code>.pdftoc .page-number</code>: Page number.</li>
+<li><code>.pdftoc .spacer</code>: The dots between title and page number.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nqdev-storage/docfx-manager-datafiles/blob/main/docs/pdf.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Supported by the <a href="https://dotnetfoundation.org">.NET Foundation</a>. Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

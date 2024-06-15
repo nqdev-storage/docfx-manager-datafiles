@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>API Page | manager-datafiles </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="API Page | manager-datafiles ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Q5N6XJHEX5"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Q5N6XJHEX5');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="manager-datafiles">
+            manager-datafiles
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 class='section'>API Page</h1><p>The API page is a YAML file format designed to represent general API pages in a structured manner. It provides a diverse set of UX components commonly found in API pages, such as headings, markdown content, fact sheets, parameters, lists, inheritance chains, and code blocks:</p>
+<pre><code class="lang-yaml">#YamlMime:ApiPage
+title: System.String
+languageId: csharp
+body:
+- h1: String Class
+- facts:
+  - name: Assembly
+    value: System.Runtime.dll
+- markdown: Represents text as a sequence of UTF-16 code units.
+- code: public sealed class String
+</code></pre>
+<p>The first line of the YAML file MUST be <code>#YamlMime:ApiPage</code>, followed by structured data that adheres to the following form:</p>
+<pre><code class="lang-typescript">/** Represents a general API page */
+type ApiPage = {
+  /** Page title */
+  title: string;
+
+  /** Opaque metadata about the page as HTML \&lt;meta&gt; tags  */
+  metadata?: { [key: string]: string | string[] };
+
+  /** Default code [language identifier](https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers) */
+  languageId?: string;
+
+  /** Page body */
+  body: Block[];
+};
+</code></pre>
+<h2 class='section'>Inline Elements</h2><p>An inline can be a string, a link, or a mix of both:</p>
+<pre><code class="lang-typescript">/** Represents an inline composed of text or links */
+type Span = string | { text: string; url?: string };
+type Inline = Span | Span[];
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- list:
+  - a string
+  - text: a link
+    url: https://dotnet.github.io/docfx
+  - - a mix of string and
+    - text: link
+      url: https://dotnet.github.io/docfx
+</code></pre>
+<p>This will be rendered as:</p>
+<dl class="typelist"><dd>
+<div>
+a string
+</div>
+<div>
+<a href='https://dotnet.github.io/docfx'>a link</a>
+</div>
+<div>
+a mix of string and<a href='https://dotnet.github.io/docfx'>link</a>
+</div>
+
+</dd></dl><h2 class='section'>Block Elements</h2><p>The body of the API page consists of an array of block level elements, each representing a different component of the page. The various types of blocks are explained below:</p>
+<h3 class='section'>Markdown</h3><p>Represents a markdown block with the markdown property for markdown content.</p>
+<pre><code class="lang-typescript">/** Represents a markdown block */
+type Markdown = {
+  /** Markdown content */
+  markdown: markdown;
+};
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- markdown: |
+    This is a **markdown** block with [links](https://dotnet.github.io/docfx).
+</code></pre>
+<p>This will be rendered as:</p>
+<p>This is a <strong>markdown</strong> block with <a href="https://dotnet.github.io/docfx">links</a>.</p>
+<h3 class='section'>Code</h3><p>Represents a code block. It includes the code property for the code text and an optional languageId for the code language identifier.</p>
+<pre><code class="lang-typescript">/** Represents a code block */
+type Code = {
+  /** Code text */
+  code: string;
+
+  /** Code [language identifier](https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers) */
+  languageId?: string;
+};
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- code: public class System.String {}
+</code></pre>
+<p>This will be rendered as:</p>
+<pre><code>public class System.String {}</code></pre><h3 class='section'>Heading</h3><p>Represents a heading in the API page. Each heading is defined by its level (from h1 to h6) and an optional identifier id for URL fragments.</p>
+<pre><code class="lang-typescript">/** Represents a heading */
+type Heading =
+  | { /** Heading title */ h1: string; /** URL fragment */ id?: string }
+  | { /** Heading title */ h2: string; /** URL fragment */ id?: string }
+  | { /** Heading title */ h3: string; /** URL fragment */ id?: string }
+  | { /** Heading title */ h4: string; /** URL fragment */ id?: string }
+  | { /** Heading title */ h5: string; /** URL fragment */ id?: string }
+  | { /** Heading title */ h6: string; /** URL fragment */ id?: string };
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- h4: This is an H4
+</code></pre>
+<p>This will be rendered as:</p>
+<h4 class='section'>This is an H4</h4><h3 class='section'>API Heading</h3><p>Represents an API heading. It includes the API name, an optional URL fragment, and optional flags for deprecation and experimental status.</p>
+<pre><code class="lang-typescript">/** Represents an API heading */
+type Api = (
+  | { /** API name */ api1: string }
+  | { /** API name */ api2: string }
+  | { /** API name */ api3: string }
+  | { /** API name */ api4: string }
+) &amp; {
+  /** API URL fragment */
+  id?: string;
+
+  /** Is this API deprecated, or the deprecation reason in markdown format */
+  deprecated?: boolean | string;
+
+  /** Is this API experimental, or the preview disclaimer text */
+  preview?: boolean | string;
+
+  /** API source URL */
+  src?: string;
+
+  /** Opaque metadata about the API as HTML data-{key} attributes  */
+  metadata?: { [key: string]: string };
+};
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- api4: Foo(int bar)
+  deprecated: true
+  src: https://dotnet.github.io/docfx
+</code></pre>
+<p>This will be rendered as:</p>
+<h4 class='section api'><span style='text-decoration: line-through'>Foo(int bar)</span>  <span class='badge rounded-pill text-bg-danger' style='font-size: .4em; vertical-align: middle'>Deprecated</span>   <a class='header-action link-secondary' title='View source' href='https://dotnet.github.io/docfx'><i class='bi bi-code-slash'></i></a></h4>
+ <p>Example:</p>
+<pre><code class="lang-yaml">body:
+- api4: Foo(int baz)
+  preview: true
+  src: https://dotnet.github.io/docfx
+</code></pre>
+<p>This will be rendered as:</p>
+<h4 class='section api'>Foo(int baz)   <span class='badge rounded-pill text-bg-info' style='font-size: .4em; vertical-align: middle'>Preview</span>  <a class='header-action link-secondary' title='View source' href='https://dotnet.github.io/docfx'><i class='bi bi-code-slash'></i></a></h4>
+ <h3 class='section'>Facts</h3><p>Represents a sheet of facts, each consisting of a name and a value.</p>
+<pre><code class="lang-typescript">/** Represents a sheet of facts */
+type Facts = {
+  facts: {
+    name: string;
+    value: Inline;
+  }[];
+};
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- facts:
+  - name: Namespace
+    value:
+    - text: System.Runtime
+      url: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: Assembly
+    value: System.Runtime.dll
+</code></pre>
+<p>This will be rendered as:</p>
+<div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='https://learn.microsoft.com/dotnet/api/system.runtime'>System.Runtime</a></dd></dl><dl><dt>Assembly</dt><dd>System.Runtime.dll</dd></dl>
+</div><h3 class='section'>List</h3><p>Represents a list of content.</p>
+<pre><code class="lang-typescript">/** Represents a list of content */
+type List = {
+  list: Inline[];
+};
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- list:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: string
+    url: https://learn.microsoft.com/dotnet/api/system.string
+</code></pre>
+<p>This will be rendered as:</p>
+<dl class="typelist"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>
+</div>
+
+</dd></dl><h3 class='section'>Inheritance</h3><p>Represents a single inheritance chain from base type to derived type.</p>
+<pre><code class="lang-typescript">/** Represents a single inheritance chain from base type to derived type */
+type Inheritance = {
+  inheritance: Inline[];
+};
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: string
+    url: https://learn.microsoft.com/dotnet/api/system.string
+</code></pre>
+<p>This will be rendered as:</p>
+<dl class="typelist inheritance"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>
+</div>
+
+</dd></dl><h3 class='section'>Parameters</h3><p>Represents a set of parameters.</p>
+<pre><code class="lang-typescript">type Param = {
+  /** Parameter name */
+  name?: string;
+
+  /** Parameter type */
+  type?: Inline;
+
+  /** Parameter default value */
+  default?: string;
+
+  /** Parameter description in markdown format */
+  description?: markdown;
+
+  /** Is this parameter deprecated, or the deprecation reason */
+  deprecated?: boolean | string;
+
+  /** Is this parameter experimental, or the preview disclaimer text */
+  preview?: boolean | string;
+}
+
+/** Represents a set of parameters */
+type Params = {
+  parameters: Param[];
+};
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-yaml">body:
+- parameters:
+  - name: T
+    description: A generic type.
+  - name: state
+    type: string
+    default: 'new'
+    description: The operation status.
+    preview: true
+  - name: removed
+    type: boolean
+    deprecated: true
+</code></pre>
+<p>This will be rendered as:</p>
+<dl class='parameters'><dt><code>T</code>   </dt>
+<dd>
+
+
+<p>A generic type.</p>
+
+</dd><dt><code>state = new</code> string   <span class='badge rounded-pill text-bg-info' style='font-size: .875em; vertical-align: middle'>Preview</span></dt>
+<dd>
+
+
+<p>The operation status.</p>
+
+</dd><dt><code style='text-decoration: line-through'>removed</code> boolean  <span class='badge rounded-pill text-bg-danger' style='font-size: .875em; vertical-align: middle'>Deprecated</span> </dt>
+<dd>
+
+
+
+</dd></dl>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Supported by the <a href="https://dotnetfoundation.org">.NET Foundation</a>. Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
