@@ -17,12 +17,14 @@
     "content": [
       {
         "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
-          "toc.yml",
           "*.md",
+          "toc.yml",
           "api/**.md",
-          "api/**/toc.yml"
+          "api/**/toc.yml",
+          "docs/**.md",
+          "docs/**/toc.yml",
+          "articles/**.md",
+          "articles/**/toc.yml"
         ]
       }
     ],
@@ -41,8 +43,8 @@
     "template": [
       "default",
       "modern",
-      "./themes/material",
-      "./themes/material-classic"
+      "templates/material",
+      "templates/material-classic"
     ],
     "postProcessors": [
       "ExtractSearchIndex"
@@ -60,6 +62,14 @@
       },
       "_gitUrlPattern": "github",
       "pdf": true
+    },
+    "fileMetadata": {
+      "pdf": {
+        "**/toc.yml": true,
+        "api/**/toc.yml": true,
+        "docs/**/toc.yml": true,
+        "articles/**/toc.yml": true
+      }
     },
     "noLangKeyword": false,
     "keepFileLink": false,

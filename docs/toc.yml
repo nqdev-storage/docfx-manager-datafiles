@@ -2,3 +2,11 @@
   href: introduction.md
 - name: Getting Started
   href: getting-started.md
+- name: Markdown
+  href: markdown.md
+- name: Pdf
+  href: pdf.md
+- name: Table Of Contents
+  href: table-of-contents.md
+- name: Template
+  href: template.md

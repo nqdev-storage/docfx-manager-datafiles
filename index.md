@@ -15,13 +15,10 @@ modern template you can still get it as [material-classic](./classic.md).
 2. Create a `templates` folder in the root of your DocFX directory.
 3. Copy the `material` folder to the `templates` folder.
 4. Update the `docfx.json` configuration to include the material template:
+
 ```json
 {
-    "template": [
-        "default",
-        "modern",
-        "templates/material"
-    ],
+  "template": ["default", "modern", "templates/material"]
 }
 ```
 
@@ -33,7 +30,6 @@ to customize a lot of the colors.
 
 Here are some of the most common customizations that can be made in the template's
 CSS file `material/public/main.css`, like updating the header color, changing the font,
-
 
 ```css
 /* Changing the navbar color only for the light theme */
@@ -61,7 +57,7 @@ CSS file `material/public/main.css`, like updating the header color, changing th
 ## Markdown extras
 
 For more reference about markdown support in DocFX check the
-[official documentation.](https://dotnet.github.io/docfx/docs/markdown.html) 
+[official documentation.](https://dotnet.github.io/docfx/docs/markdown.html)
 
 > [!NOTE]
 > This is a note which needs your attention, but it's not super important.

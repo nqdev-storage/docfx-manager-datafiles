@@ -2,8 +2,13 @@
   href: index.md
 - name: Material classic
   href: classic.md
+- name: DocFX Docs
+  href: docfx-docs.md
 - name: Changelog
   href: changelog.md
+- name: Sample Docs
+  href: docs/
+  topicHref: docs/introduction.md
 - name: Sample Articles
   href: articles/
 - name: Sample API
