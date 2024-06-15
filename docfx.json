@@ -64,6 +64,12 @@
       "pdf": true
     },
     "fileMetadata": {
+      "fileMetadata": {
+        "_appTitle": {
+          "articles/dotnet/**/*.md": ".NET",
+          "articles/typescript/**/*.md": "TypeScript"
+        }
+      },
       "pdf": {
         "**/toc.yml": true,
         "api/**/toc.yml": true,

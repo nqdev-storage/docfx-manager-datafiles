@@ -1,3 +1,8 @@
+---
+title: DocFX Docs
+description: DocFX Docs description
+---
+
 > [!NOTE]
 > Information the user should notice even if skimming.
 
