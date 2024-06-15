@@ -2,73 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/README.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/docs/api-page.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/api/getting-started.html</loc>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/api/introduction.html</loc>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/docs/getting-started.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/docs/introduction.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/docs/markdown.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/docs/pdf.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/docs/table-of-contents.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/docs/template.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/extensions/packages.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/extensions/templates.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/extensions/tools.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://github.com/nqdev-storage/docfx-manager-datafiles/index.html</loc>
-    <lastmod>2024-06-15T12:23:44+07:00</lastmod>
+    <lastmod>2024-06-15T12:29:30+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

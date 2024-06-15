@@ -26,6 +26,26 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "api/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
@@ -64,16 +84,6 @@
       "output": {
         "resource": {
           "relative_path": "codesnippet/Rtf/RtfDocumentProcessor.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ApiPage",
-      "source_relative_path": "docs/api-page.yml",
-      "output": {
-        ".html": {
-          "relative_path": "docs/api-page.html"
         }
       },
       "version": ""
