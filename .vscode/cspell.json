@@ -1,12 +1,6 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": [
-    "docfx",
-    "dụng",
-    "Phiên",
-    "quyit",
-    "tiên"
-  ],
+  "words": ["docfx", "dụng", "ovasquez", "Phiên", "quyit", "tiên"],
   "flagWords": []
 }
