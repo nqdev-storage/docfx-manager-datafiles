@@ -48,7 +48,7 @@
       "ExtractSearchIndex"
     ],
     "globalMetadata": {
-      "_appFooter": "<span>Copyright © 2023 Oscar Vasquez. Generated with <a href=\"https://dotnet.github.io/docfx\">DocFX</a></span>",
+      "_appFooter": "<span>Copyright © 2023 <a href=\"https://github.com/ovasquez/docfx-material\">Oscar Vasquez</a>. Generated with <a href=\"https://dotnet.github.io/docfx\">DocFX</a></span>",
       "_appName": "Manager Datafiles",
       "_appTitle": "Manager Datafiles",
       "_appLogoPath": "images/code.svg",
