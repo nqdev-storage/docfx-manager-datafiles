@@ -1,0 +1,37 @@
+{
+  "README.html": {
+    "href": "README.html",
+    "title": "docfx-manager-datafiles | Manager Datafiles",
+    "keywords": "docfx-manager-datafiles Manager Datafiles API"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | Manager Datafiles",
+    "keywords": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | Manager Datafiles",
+    "keywords": "Introduction"
+  },
+  "docs/research/larksuite.html": {
+    "href": "docs/research/larksuite.html",
+    "title": "larksuite | Manager Datafiles",
+    "keywords": "larksuite client upload --> upload to s3-*** --> write to larksuite as a database"
+  },
+  "docs/research/supabase.html": {
+    "href": "docs/research/supabase.html",
+    "title": "supabase | Manager Datafiles",
+    "keywords": "supabase Supabase is an open source Firebase alternative. Start your project with a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings. Supabase REST API Supabase Docker Todo example using Supabase"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | Manager Datafiles",
+    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  },
+  "security.html": {
+    "href": "security.html",
+    "title": "| Manager Datafiles",
+    "keywords": "Reporting a Vulnerability Please DO NOT file a public issue, instead send your report privately to security@docker.com. Security reports are greatly appreciated and we will publicly thank you for it, although we will keep your name confidential if you request it. We also like to send gifts—if you're into swag, make sure to let us know. We currently do not offer a paid security bug bounty program, but are not ruling it out in the future."
+  }
+}
