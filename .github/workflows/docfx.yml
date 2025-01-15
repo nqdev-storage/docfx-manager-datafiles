@@ -32,8 +32,7 @@ jobs:
 
       # Triển khai tài liệu lên GitHub Pages
       - name: Deploy to GitHub Pages
-        # uses: JamesIves/github-pages-deploy-action@v4
-        uses: nqdev-storage/docfx-manager-datafiles@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # Nhánh để triển khai (thường là gh-pages)
           folder: _site # Thư mục output từ DocFX
