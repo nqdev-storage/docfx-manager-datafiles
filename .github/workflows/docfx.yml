@@ -32,8 +32,8 @@ jobs:
 
       # Triển khai tài liệu lên GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: nguyenquy0710/github-pages-deploy-action@v4
         with:
           branch: gh-pages # Nhánh để triển khai (thường là gh-pages)
           folder: _site # Thư mục output từ DocFX
-          token: ${{ secrets.GITHUB_TOKEN }} # Cung cấp token cho phép deploy
+          token: ${{ secrets.GH_TOKEN }} # Cung cấp token cho phép deploy
