@@ -1,0 +1,16 @@
+name: online-tools
+id: ari:cloud:compass:d080ee26-f21d-4730-84de-98c025104c05:component/e09ef9ad-8d69-4877-b0ee-7395c9ca13a3/3274ec94-8a3a-43e0-bf7a-ff98ec8af6b0
+description: Manager Datafiles API
+configVersion: 1
+typeId: SERVICE
+fields:
+  tier: 4
+links:
+  - name: null
+    type: REPOSITORY
+    url: https://github.com/nqdev-storage/docfx-manager-datafiles
+relationships:
+  DEPENDS_ON: []
+labels:
+  - source:github
+customFields: null
